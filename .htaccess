@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Log ke file
+RewriteLog "/path/to/rewrite.log"
+RewriteLogLevel 3
+
+# Hanya izinkan akses ke absensi.php jika status.txt berisi 'enabled'
+RewriteCond %{DOCUMENT_ROOT}/absensi%20forms/status.txt -f
+RewriteCond %{DOCUMENT_ROOT}/absensi%20forms/status.txt -f
+RewriteRule ^absensi\.php$ https://ctf-tb.kesug.com/forbidden/401/ [R=302,L]
+
+RewriteCond %{DOCUMENT_ROOT}/absensi%20forms/status.txt -f
+RewriteCond %{DOCUMENT_ROOT}/absensi%20forms/status.txt -f
+RewriteCond %{DOCUMENT_ROOT}/absensi%20forms/status.txt !-f
+RewriteRule ^absensi\.php$ https://ctf-tb.kesug.com/forbidden/401/ [R=302,L]
+</IfModule>
